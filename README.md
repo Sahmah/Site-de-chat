@@ -9,15 +9,17 @@ Criamos um ft.Text("Chatzapp", size=40, color=ft.colors.CYAN_700) para exibir o 
 
 ## Criando a Estrutura do Chat
 Criamos um ft.Column() chamado chat, onde as mensagens serão exibidas, uma abaixo da outra.
-Criamos um campo de texto (ft.TextField) para o usuário digitar seu nome.
+<div>Criamos um campo de texto (ft.TextField) para o usuário digitar seu nome.
+</div>
 
 ## Função para Enviar Mensagens pelo "Túnel" (pubsub)
 pagina.pubsub.subscribe(enviar_mensagem_tunel): O Flet usa um sistema de comunicação chamado pubsub, que permite enviar mensagens entre usuários conectados.
-Quando uma mensagem é recebida, verificamos o tipo:
-Se for "mensagem", adicionamos o nome do usuário e o texto ao chat.
-Se for "entrada", mostramos que o usuário entrou no chat.
-Chamamos pagina.update() para atualizar a interface automaticamente.
-
+<div>Quando uma mensagem é recebida, verificamos o tipo:
+<div>Se for "mensagem", adicionamos o nome do usuário e o texto ao chat.
+<div>Se for "entrada", mostramos que o usuário entrou no chat.
+<div>Chamamos pagina.update() para atualizar a interface automaticamente.
+</div>
+  
 ## Função para Enviar uma Nova Mensagem
 Pegamos o texto digitado com campo_mensagem.value.
 <div>Enviamos a mensagem para todos os usuários com pagina.pubsub.send_all().
